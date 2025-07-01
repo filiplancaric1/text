@@ -28,6 +28,25 @@ out mem – vypíš pamäťový blok
 Pohyb v texte
 move {sp/ep} n – posuň sp (start pointer) alebo ep (end pointer) o n slov
 
+napriklad:
+> in
+Zadajte riadky (ukončite prázdnym riadkom):
+Toto je prvý riadok.
+Druhý riadok je tu.
+Tretí je posledný.
+
+> out op
+Toto je prvý riadok.
+Druhý riadok je tu.
+Tretí je posledný.
+
+> move sp 2
+> crop 7 13
+> out op
+Toto je prvý riadok.
+Druhý
+Tretí je posledný.
+
 start {sp/ep} – nastav začiatok
 
 end {sp/ep} – nastav koniec
