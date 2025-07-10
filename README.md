@@ -38,5 +38,7 @@ Termination of the program:
    exit or quit
 
 Example:
+
+
 <img width="519" height="559" alt="image" src="https://github.com/user-attachments/assets/926f0a55-9268-4019-8534-a46e0cd9ca9f" />
 
