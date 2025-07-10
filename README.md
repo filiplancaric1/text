@@ -33,6 +33,7 @@ ERRORS:
    ERR_OVERFLOW – This occurs when an operation (like in or insert) would exceed the capacity of the op array.
    ERR_POSITION – This occurs when the sp pointer is positioned after the ep pointer (sp > ep), in commands like out range, del, crop, copy, insert, or replace.
    ERR_OUT_OF_RANGE – This occurs when a move command attempts to shift the pointer (sp or ep) outside the valid range of the op string.
+   (After error program will automatically turn off)
 
 Termination of the program:
    exit or quit
