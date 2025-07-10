@@ -1,75 +1,42 @@
-# text
+# Text
+In this project I work with text in C language. This project was created as my assignemt for school 
 
-V tomto projekte sa pracuje s textom
+## How to use
+1.Open text.exe
 
-## Inštalácia
+2.Available commands
+I/O Commands:
+   in – load input
+   out op – print the entire current text
+   out range – print a selected range
+   out mem – print the memory block
 
-1. Klonuj repozitár:
-   ```bash
-   git clone git@github.com:filiplancaric1/console-text-processor.git
-   cd console-text-processor
-Prelož program:
+Movement in text:
+   move {sp/ep} n – posuň sp (start pointer) alebo ep (end pointer) o n slov
+   start {sp/ep} – nastav začiatok
+   end {sp/ep} – nastav koniec
 
-bash
-Kopírovať
-Upraviť
-gcc main.c -o processor -lm
+Word detection:
+   first – select the first word
+   last – select the last word
+   prev – move to the previous word
+   next – move to the next word
 
-### Použitie – dostupné príkazy
-I/O príkazy
-in – načítaj vstup
+Operations with strings
+   del – delete the selected range
+   crop – keep only the selected range
+   copy – copy the selected range to memory
+   insert {n/mem} – insert either n spaces or the contents of memory at the current position
+   replace – replace the selected range with the contents of memory
 
-out op – vypíš aktuálny výstup
+ERRORS:
+   ERR_OVERFLOW – This occurs when an operation (like in or insert) would exceed the capacity of the op array.
+   ERR_POSITION – This occurs when the sp pointer is positioned after the ep pointer (sp > ep), in commands like out range, del, crop, copy, insert, or replace.
+   ERR_OUT_OF_RANGE – This occurs when a move command attempts to shift the pointer (sp or ep) outside the valid range of the op string.
 
-out range – vypíš zadaný rozsah
+Termination of the program:
+   exit or quit
 
-out mem – vypíš pamäťový blok
+Example:
+<img width="519" height="559" alt="image" src="https://github.com/user-attachments/assets/926f0a55-9268-4019-8534-a46e0cd9ca9f" />
 
-Pohyb v texte
-move {sp/ep} n – posuň sp (start pointer) alebo ep (end pointer) o n slov
-
-napriklad:
-> in
-Zadajte riadky (ukončite prázdnym riadkom):
-Toto je prvý riadok.
-Druhý riadok je tu.
-Tretí je posledný.
-
-> out op
-Toto je prvý riadok.
-Druhý riadok je tu.
-Tretí je posledný.
-
-> move sp 2
-> crop 7 13
-> out op
-Toto je prvý riadok.
-Druhý
-Tretí je posledný.
-
-start {sp/ep} – nastav začiatok
-
-end {sp/ep} – nastav koniec
-
-Detekcia slov
-first – nastav na prvé slovo
-
-last – nastav na posledné slovo
-
-prev – predchádzajúce slovo
-
-next – nasledujúce slovo
-
-Operácie s reťazcami
-del – zmaž výber
-
-crop – orež výber
-
-copy – skopíruj výber
-
-insert {n/mem} – vlož slovo z pamäte alebo pozície
-
-replace – nahraď výber
-
-Ukončenie programu
-exit alebo quit
